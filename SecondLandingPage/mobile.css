@@ -1,0 +1,32 @@
+@media screen and (max-width: 940px){
+    /* Contact styles start */
+    .abstract__wrap{
+        display: block;
+    }
+    
+    .left__wrap{
+        padding-bottom: 40px;
+    }
+
+    .top__wrap{
+        display: block;
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .input__top{
+        display: block;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .input__send{
+        margin: 0;
+    }
+
+    .down_wrap{
+        padding: 0;
+        margin-bottom: 20px;
+    }
+    /* Contact styles end */
+}

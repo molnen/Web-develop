@@ -1,0 +1,61 @@
+@media screen and (max-width: 428px){
+
+    /* Header styles start */
+    .header{
+        display: none;
+    }
+    /* Header styles end */
+
+
+
+    /* Inrto styles start */
+    .intro__wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 64px;
+    }
+
+    .text__wrapper{
+        display: grid;
+        max-width: 180px;
+    }
+
+    .intro__img{
+        content: url(../img/jpg/mobile_avatar.jpg);
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    .intro__languague{
+        display: none;
+    }
+
+    .intro__menu{
+        width: 33px;
+        height: 20px;
+        padding-top: 15px;
+    }
+
+    .black__stick{
+        width: 33px;
+        height: 4px;
+        background: black;
+        margin-bottom: 4px;
+    }
+    /* Inrto styles end */
+
+
+
+    /* Contacts styles start */
+    .send__message{
+        width: 300px;
+    }
+
+    .contacts__p2{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    /* Contacts styles end */
+}
