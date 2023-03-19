@@ -1,0 +1,451 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-decoration: none;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+select:focus {
+  outline: none;
+}
+
+@font-face {
+  font-family: "Exo 400";
+  src: url("../fonts/Exo 2/Exo2-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Exo 500";
+  src: url("../fonts/Exo 2/Exo2-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Exo 600";
+  src: url("../fonts/Exo 2/Exo2-SemiBold.ttf");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+body {
+  color: #333333;
+}
+
+p, option, label, textarea::placeholder, input::placeholder {
+  font-family: "Exo 400", sans-serif;
+  font-size: 14px;
+  line-height: 22px;
+}
+
+h1, button {
+  font-family: "Exo 500", sans-serif;
+}
+
+h2, h3, select {
+  font-family: "Exo 600", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.content {
+  display: flex;
+  width: 1440px;
+  height: 800px;
+  border: 1px solid #000;
+}
+
+/* Header (begin) */
+header {
+  position: relative;
+  flex-basis: 720px;
+  padding: 60px 150px;
+  background: url(../images/page1/main-image.jpg) no-repeat center center/cover;
+}
+header .red-rect {
+  float: left;
+  margin-right: 10px;
+  margin-top: 3px;
+  width: 3px;
+  height: 13px;
+  background-color: red;
+}
+header h1 {
+  float: left;
+  text-transform: uppercase;
+  color: #fff;
+  font-family: "Exo 500";
+  font-size: 16px;
+  line-height: 20px;
+}
+header #title {
+  position: absolute;
+  top: 45%;
+  max-width: 380px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 56px;
+}
+
+/* Header (end) */
+/* Main (start) */
+main {
+  flex-basis: 720px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* Build (start) */
+  /* Build (end) */
+  /* Model (begin) */
+  /* Model (end) */
+  /* Additionally (begin) */
+  /* Additionally (end) */
+  /* Photo (begin) */
+  /* Photo (end) */
+  /* Description (begin) */
+  /* Description (end) */
+  /* Ready (begin) */
+  /* Ready (end) */
+}
+main .modal-close {
+  align-self: flex-end;
+  padding: 30px 30px 0 0;
+}
+main #build-container h3 {
+  padding: 0 0 20px 127px;
+}
+main .form_radio_btn input[type=radio] {
+  display: none;
+}
+main .form_radio_btn label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 0 10px 127px;
+  padding: 20px;
+  cursor: pointer;
+  width: 458px;
+  height: 118px;
+  background-color: #fff;
+  border: 1px solid #E2E5E9;
+  border-radius: 5px;
+  user-select: none;
+}
+main .form_radio_btn label .build-image {
+  float: left;
+  margin-right: 10px;
+}
+main .form_radio_btn label h3 {
+  float: left;
+}
+main .form_radio_btn label p {
+  max-width: 425px;
+  text-align: left;
+  color: #868E96;
+}
+main .form_radio_btn input[type=radio]:checked + label {
+  border: 1px solid #E62128;
+}
+main .form_radio_btn label:hover {
+  border: 1px solid #E62128;
+}
+main #model-container {
+  display: none;
+  flex-direction: column;
+  gap: 28px;
+  position: relative;
+  align-self: center;
+  width: 457px;
+  height: auto;
+}
+main #model-container select {
+  cursor: pointer;
+  color: #ADB5BD;
+  border: none;
+  appearance: none;
+  background: url(../images/page2/disabled.jpg) no-repeat right center;
+}
+main #model-container select:hover, main #model-container select:focus {
+  color: #333333;
+  background: url(../images/page2/selected.jpg) no-repeat right center;
+}
+main #model-container .miss {
+  position: absolute;
+  align-self: center;
+  top: 310px;
+}
+main #model-container .miss a {
+  color: #E62128;
+}
+main #additionally-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 28px;
+  width: 457px;
+  height: auto;
+}
+main #additionally-container select {
+  cursor: pointer;
+  border: none;
+  color: #ADB5BD;
+  appearance: none;
+  background: url(../images/page2/disabled.jpg) no-repeat right center;
+}
+main #additionally-container select:hover, main #additionally-container select:focus {
+  color: #333333;
+  background: url(../images/page2/selected.jpg) no-repeat right center;
+}
+main #additionally-container select option {
+  height: 40px;
+  line-height: 40px;
+  padding: 9px 15px;
+}
+main #additionally-container .horizontal-line {
+  height: 1px;
+  width: 100%;
+  background-color: #E2E5E9;
+}
+main #additionally-container .choice-color {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+main #additionally-container .choice-color .colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main #additionally-container .choice-color .colors input[type=radio] {
+  display: none;
+}
+main #additionally-container .choice-color .colors label {
+  display: block;
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+main #additionally-container .choice-color .colors label[for=white] {
+  border: 1px solid #E2E5E9;
+}
+main #additionally-container .choice-color .colors input[type=radio]:checked + label::before {
+  position: absolute;
+  content: url(../images/page3/Done.png);
+}
+main #photo-container {
+  display: flex;
+  align-self: center;
+  flex-direction: column;
+  gap: 10px;
+  width: 457px;
+  height: auto;
+}
+main #photo-container #first-photo {
+  display: none;
+}
+main #photo-container label[for=first-photo] {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 457px;
+  height: 303px;
+  cursor: pointer;
+  background-color: #FAFAFB;
+  border: 1px solid #E2E5E9;
+  border-radius: 5px;
+}
+main #photo-container label[for=first-photo] img {
+  width: 24px;
+  height: auto;
+}
+main #photo-container #show-file1 {
+  display: none;
+  justify-content: center;
+  position: relative;
+}
+main #photo-container #show-file1 img {
+  max-width: 457px;
+  max-height: 303px;
+}
+main #photo-container #show-file1 button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 92px;
+  height: 24px;
+  background: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: "Exo 400";
+  font-size: 12px;
+  line-height: 18px;
+}
+main #photo-container #show-file1 .delete-img {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+main #description-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 20px;
+  width: 457px;
+  height: auto;
+}
+main #description-container textarea {
+  width: 457px;
+  resize: none;
+  padding: 12px 15px;
+  border: 1px solid #E2E5E9;
+  border-radius: 5px;
+}
+main #ready-container {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-items: center;
+  gap: 60px;
+  width: 457px;
+  height: auto;
+}
+main #ready-container img {
+  width: 170px;
+  height: auto;
+}
+main #ready-container .vin-container h3 {
+  margin-bottom: 20px;
+}
+main #ready-container .vin-container #vin-number {
+  width: 100%;
+  height: 48px;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border: 1px solid #E2E5E9;
+  border-radius: 5px;
+}
+main #ready-container .vin-container label {
+  color: #868E96;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+main .pages {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30px;
+}
+main .pages .page {
+  width: 126px;
+  height: 2px;
+  background: #E2E5E9;
+}
+main .form-direction {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 30px;
+}
+main .form-direction .direction-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 155px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #E2E5E9;
+  border-radius: 5px;
+}
+main .form-direction .direction-btn p {
+  line-height: 40px;
+}
+main .form-direction .direction-btn#next-btn {
+  padding-left: 10px;
+  border: none;
+  color: #ffffff;
+  background-color: #E62128;
+}
+main .form-direction .direction-btn#next-btn:disabled {
+  background-color: #F5F5F5;
+  color: #ADB5BD;
+}
+
+/* Main (end) */
+
+/*# sourceMappingURL=style.css.map */
