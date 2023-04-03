@@ -1,4 +1,5 @@
 @import 'reset';
+@import 'select';
 
 @font-face{
     font-family: 'Exo 400';
@@ -174,16 +175,26 @@ main{
     /* Model (begin) */
     #model-container{
         display: none;
-        flex-direction: column;
-        gap: 28px;
 
         position: relative;
         align-self: center;
 
         width: 457px;
-        height: auto;
+        height: 170px;
+
+        label{
+            display: none;
+            
+            font-size: 12px;
+            line-height: 18px;
+
+            color: #868E96;
+        }
 
         select{
+            width: 100%;
+            margin-bottom: 36px;
+
             cursor: pointer;
             color: #ADB5BD;
             border: none;
@@ -198,7 +209,6 @@ main{
 
         .miss{
             position: absolute;
-            align-self: center;
             top: 310px;
 
             a{
@@ -210,18 +220,30 @@ main{
 
     /* Additionally (begin) */
     #additionally-container{
-        display: flex;
-        flex-direction: column;
+        display: none;
+
+
         align-self: center;
-        gap: 28px;
 
         width: 457px;
-        height: auto;
+        height: 441px;
+
+        label{
+            display: none;
+            
+            font-size: 12px;
+            line-height: 18px;
+
+            color: #868E96;
+        }
 
         select{
+            width: 100%;
+            margin-bottom: 36px;
+
             cursor: pointer;
-            border: none;
             color: #ADB5BD;
+            border: none;
             appearance: none;
             background: url(../images/page2/disabled.jpg) no-repeat right center;
 
@@ -229,18 +251,13 @@ main{
                 color: #333333;
                 background: url(../images/page2/selected.jpg) no-repeat right center;
             }
-
-            option{
-                height: 40px;
-                line-height: 40px;
-
-                padding: 9px 15px;
-            }
         }
 
         .horizontal-line{
             height: 1px;
             width: 100%;
+
+            margin-bottom: 18px;
 
             background-color: #E2E5E9;
         }
@@ -275,9 +292,11 @@ main{
                 }
         
                 input[type=radio]:checked + label {
+                    position: relative;
                     &::before{
                         position: absolute;
-
+                        top: 25%;
+                        left: 25%;
                         content: url(../images/page3/Done.png);
                     }
                 }
@@ -296,7 +315,7 @@ main{
         width: 457px;
         height: auto;
 
-        #first-photo{
+        input{
             display: none;
         }
 
@@ -319,12 +338,36 @@ main{
                 width: 24px;
                 height: auto;
             }
+
+            .p2{
+                color: #999999;
+            }
+        }
+
+        label[for=second-photo], label[for=third-photo]{
+            display: none;
+            justify-content: center;
+
+            width: 224px;
+            height: 149px;
+
+            cursor: pointer;
+            background-color: #FAFAFB;
+            border: 1px solid #E2E5E9;
+            border-radius: 5px;
+
+            img{
+                align-self: center;
+            }
         }
 
         #show-file1{
             display: none;
             justify-content: center;
             position: relative;
+
+            border: 1px solid #E2E5E9;
+            border-radius: 5px;
             
             img{
                 max-width: 457px;
@@ -353,12 +396,53 @@ main{
                 position: absolute;
                 top: 5px;
                 right: 5px;
-
+    
                 width: 24px;
                 height: 24px;
-
+    
                 cursor: pointer;
             }
+        }
+        
+        .another-photo{
+            display: flex;
+            gap: 10px;
+
+            #show-file2, #show-file3{
+                display: none;
+                justify-content: center;
+                position: relative;
+    
+                width: 224px;
+                height: 149px;
+
+                border: 1px solid #E2E5E9;
+                border-radius: 5px;
+                
+                img{
+                    max-width: 224px;
+                    max-height: 149px;
+                }
+    
+                .delete-img{
+                    position: absolute;
+                    top: 5px;
+                    right: 5px;
+        
+                    width: 24px;
+                    height: 24px;
+        
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .photo-descrition{
+            display: none;
+
+            color: #999999;
+            font-size: 12px;
+            line-height: 18px;
         }
     }
     /* Photo (end) */

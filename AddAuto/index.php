@@ -64,17 +64,23 @@
 
         <!-- Model (begin) -->
         <section id="model-container" style="display: none;">
-            <select name="make" id="make-select" onChange="checkModel(this)">
+            <label for="make-select">Марка авто</label>
+            <select class="model-choice" name="make" id="make-select" onChange="checkModel(this)">
                 <option value="" disabled hidden selected>Марка</option>
-                <option value="tmp">temp</option>
+                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                <option value="Toyota">Toyota</option>
             </select>
-            <select name="model" id="model-select" onChange="checkModel(this)">
+
+            <label for="model-select">Модель</label>
+            <select class="model-choice" name="model" id="model-select" onChange="checkModel(this)">
                 <option value="" disabled hidden selected>Модель</option>
-                <option value="tmp">temp</option>
+                <option value="E-klasse W210">E-klasse W210</option>
             </select>
-            <select name="year" id="year-select" onChange="checkModel(this)">
+
+            <label for="year-select">Год</label>
+            <select class="model-choice" name="year" id="year-select" onChange="checkModel(this)">
                 <option value="" disabled hidden selected>Год</option>
-                <option value="tmp">temp</option>
+                <option value="2019">2019</option>
             </select>
 
             <div class="miss">
@@ -85,6 +91,7 @@
 
         <!-- Additionally (begin) -->
         <section id="additionally-container" style="display: none;">
+            <label for="engine-select">Тип двигателя</label>
             <select name="engine" id="engine-select" onChange="checkAdditionally(this)">
                 <option value="" disabled hidden selected>Тип двигателя</option>
                 <option value="petrol">Бензиновый</option>
@@ -92,18 +99,24 @@
                 <option value="hybrid">Гибридный</option>
                 <option value="electric">Электро</option>
             </select>
+
+            <label for="capacity-select">Объем</label>
             <select name="capacity" id="capacity-select" onChange="checkAdditionally(this)">
                 <option value="" disabled hidden selected>Объем</option>
                 <option value="1">1</option>
                 <option value="1.5">1,5</option>
                 <option value="2">2</option>
             </select>
+
+            <label for="drive-select">Привод</label>
             <select name="drive" id="drive-select" onChange="checkAdditionally(this)">
                 <option value="" disabled hidden selected>Привод</option>
                 <option value="front-wheel">Передний</option>
                 <option value="rear-wheel">Задний</option>
                 <option value="all-wheel">Полный</option>
             </select>
+
+            <label for="transmission-select">Коробка</label>
             <select name="transmission" id="transmission-select" onChange="checkAdditionally(this)">
                 <option value="" disabled hidden selected>Коробка</option>
                 <option value="manual">Маханическаяя</option>
@@ -170,7 +183,8 @@
 
         <!-- Photo (begin) -->
         <section id="photo-container" style="display: none;">
-            <input type="file" name="firstPhoto" onchange="getPhotoFiles()" id="first-photo">
+            <!-- Первое фото -->
+            <input type="file" name="firstPhoto"  id="first-photo">
             <label for="first-photo" id="first-label">
                 <img src="images/page4/Add Photo.png" alt="Фото">
                 <p class="p1">Добавьте или перетащите сюда фото</p>
@@ -180,6 +194,30 @@
                 <button type="button">Главное фото</button>
                 <img src="images/page5/Delete3.png" alt="Х" id="delete-img1" class="delete-img">
             </span>
+            <!--  -->
+
+            <div class="another-photo">
+                <!-- Второе фото -->
+                <input type="file" name="secondPhoto"  id="second-photo">
+                <label for="second-photo" id="second-label">
+                    <img src="images/page4/Add Photo.png" alt="Фото">
+                </label>
+                <span id="show-file2" class="photo-row2">
+                    <img src="images/page5/Delete3.png" alt="Х" id="delete-img2" class="delete-img">
+                </span>
+                <!--  -->
+
+                <!-- Третье фото -->
+                <input type="file" name="thirdPhoto"  id="third-photo">
+                <label for="third-photo" id="third-label">
+                    <img src="images/page4/Add Photo.png" alt="Фото">
+                </label>
+                <span id="show-file3" class="photo-row2">
+                    <img src="images/page5/Delete3.png" alt="Х" id="delete-img3" class="delete-img">
+                </span>
+                <!--  -->
+            </div>
+            <p class="photo-descrition">Первое фото будет главным у СТО.</p>
         </section>
         <!-- Photo (end) -->
 
@@ -218,7 +256,7 @@
 
                 <form action="" id="get-result" method="post">
                     <button type="button" id="next-btn" class="direction-btn" disabled>
-                        Далее
+                        <p>Далее</p>
                         <img id="next-image" src="images/page1/Arrow Right.png" alt="Стрелка">
                     </button>
                 </form>
@@ -231,6 +269,7 @@
 </div>
 </div>
 
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="index.js"></script>
 </body>
 </html>

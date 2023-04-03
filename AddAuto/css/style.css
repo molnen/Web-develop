@@ -72,6 +72,87 @@ select:focus {
   font-style: normal;
 }
 @font-face {
+  font-family: "Exo 600";
+  src: url("../fonts/Exo 2/Exo2-SemiBold.ttf");
+  font-weight: 600;
+  font-display: swap;
+  font-style: normal;
+}
+.choices {
+  margin-bottom: 30px;
+  font-family: "Exo 600", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+.choices:hover.choices[data-type*=select-one]:after {
+  background: url(../images/page2/selected.jpg);
+}
+
+.choices[data-type*=select-one]:after {
+  right: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  background: url(../images/page2/disabled.jpg);
+  border: none;
+}
+
+.choices[data-type*=select-one].is-open:after {
+  margin: 0;
+  background: url(../images/page2/selected.jpg);
+}
+
+.choices__inner {
+  background: #ffffff;
+  border: none;
+  padding: 0;
+  min-height: 24px;
+  font-size: 16px;
+}
+
+.choices[data-type*=select-one] .choices__inner {
+  padding: 0;
+}
+
+.choices__placeholder {
+  opacity: 1;
+  color: #ADB5BD;
+}
+.choices__placeholder:hover {
+  color: #333333;
+}
+
+.choices__list--single {
+  padding: 0;
+}
+
+.choices__list--dropdown {
+  border: none;
+  background: #FFFFFF;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  margin: 0;
+}
+.choices__list--dropdown .choices__item {
+  padding: 9px 15px;
+  border-bottom: 1px solid #E2E5E9;
+  font-family: "Exo 400";
+  font-size: 14px;
+  line-height: 22px;
+}
+.choices__list--dropdown .choices__placeholder {
+  display: none;
+}
+
+@font-face {
+  font-family: "Exo 400";
+  src: url("../fonts/Exo 2/Exo2-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
   font-family: "Exo 500";
   src: url("../fonts/Exo 2/Exo2-Medium.ttf");
   font-weight: 500;
@@ -217,14 +298,20 @@ main .form_radio_btn label:hover {
 }
 main #model-container {
   display: none;
-  flex-direction: column;
-  gap: 28px;
   position: relative;
   align-self: center;
   width: 457px;
-  height: auto;
+  height: 170px;
+}
+main #model-container label {
+  display: none;
+  font-size: 12px;
+  line-height: 18px;
+  color: #868E96;
 }
 main #model-container select {
+  width: 100%;
+  margin-bottom: 36px;
   cursor: pointer;
   color: #ADB5BD;
   border: none;
@@ -237,24 +324,29 @@ main #model-container select:hover, main #model-container select:focus {
 }
 main #model-container .miss {
   position: absolute;
-  align-self: center;
   top: 310px;
 }
 main #model-container .miss a {
   color: #E62128;
 }
 main #additionally-container {
-  display: flex;
-  flex-direction: column;
+  display: none;
   align-self: center;
-  gap: 28px;
   width: 457px;
-  height: auto;
+  height: 441px;
+}
+main #additionally-container label {
+  display: none;
+  font-size: 12px;
+  line-height: 18px;
+  color: #868E96;
 }
 main #additionally-container select {
+  width: 100%;
+  margin-bottom: 36px;
   cursor: pointer;
-  border: none;
   color: #ADB5BD;
+  border: none;
   appearance: none;
   background: url(../images/page2/disabled.jpg) no-repeat right center;
 }
@@ -262,14 +354,10 @@ main #additionally-container select:hover, main #additionally-container select:f
   color: #333333;
   background: url(../images/page2/selected.jpg) no-repeat right center;
 }
-main #additionally-container select option {
-  height: 40px;
-  line-height: 40px;
-  padding: 9px 15px;
-}
 main #additionally-container .horizontal-line {
   height: 1px;
   width: 100%;
+  margin-bottom: 18px;
   background-color: #E2E5E9;
 }
 main #additionally-container .choice-color {
@@ -295,8 +383,13 @@ main #additionally-container .choice-color .colors label {
 main #additionally-container .choice-color .colors label[for=white] {
   border: 1px solid #E2E5E9;
 }
+main #additionally-container .choice-color .colors input[type=radio]:checked + label {
+  position: relative;
+}
 main #additionally-container .choice-color .colors input[type=radio]:checked + label::before {
   position: absolute;
+  top: 25%;
+  left: 25%;
   content: url(../images/page3/Done.png);
 }
 main #photo-container {
@@ -307,7 +400,7 @@ main #photo-container {
   width: 457px;
   height: auto;
 }
-main #photo-container #first-photo {
+main #photo-container input {
   display: none;
 }
 main #photo-container label[for=first-photo] {
@@ -327,10 +420,28 @@ main #photo-container label[for=first-photo] img {
   width: 24px;
   height: auto;
 }
+main #photo-container label[for=first-photo] .p2 {
+  color: #999999;
+}
+main #photo-container label[for=second-photo], main #photo-container label[for=third-photo] {
+  display: none;
+  justify-content: center;
+  width: 224px;
+  height: 149px;
+  cursor: pointer;
+  background-color: #FAFAFB;
+  border: 1px solid #E2E5E9;
+  border-radius: 5px;
+}
+main #photo-container label[for=second-photo] img, main #photo-container label[for=third-photo] img {
+  align-self: center;
+}
 main #photo-container #show-file1 {
   display: none;
   justify-content: center;
   position: relative;
+  border: 1px solid #E2E5E9;
+  border-radius: 5px;
 }
 main #photo-container #show-file1 img {
   max-width: 457px;
@@ -357,6 +468,37 @@ main #photo-container #show-file1 .delete-img {
   width: 24px;
   height: 24px;
   cursor: pointer;
+}
+main #photo-container .another-photo {
+  display: flex;
+  gap: 10px;
+}
+main #photo-container .another-photo #show-file2, main #photo-container .another-photo #show-file3 {
+  display: none;
+  justify-content: center;
+  position: relative;
+  width: 224px;
+  height: 149px;
+  border: 1px solid #E2E5E9;
+  border-radius: 5px;
+}
+main #photo-container .another-photo #show-file2 img, main #photo-container .another-photo #show-file3 img {
+  max-width: 224px;
+  max-height: 149px;
+}
+main #photo-container .another-photo #show-file2 .delete-img, main #photo-container .another-photo #show-file3 .delete-img {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+main #photo-container .photo-descrition {
+  display: none;
+  color: #999999;
+  font-size: 12px;
+  line-height: 18px;
 }
 main #description-container {
   display: flex;
